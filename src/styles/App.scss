@@ -5,23 +5,100 @@ $large:     980px;
 $exlarge:   2000px;
 
 // Colors
-
-// TODO: edit these
 $black:     #000;
-$grey:      #CCC;
-$lightgrey: #989898;
 $white:     #FFF;
+$orange:    #cd7b00;
+$grey:      #0d0c0d;
+$dark-grey: #0d0c0d;
+$mid-grey:  #171717;
+$light-grey:#a1a1a1;
 
-
-// Vintage Romantic
-$dark:          #260126;
-$brown:         #59323C;
-$yellow:        #F2EEB3;
-$tan:           #BFAF80;
-$light-brown:   #8C6954;
-$grey:          #E9E9E9;
-$dark-grey:     rgba(0,0,0,0.54);
-$blue:          #4285f4;
 
 // Google Fonts
+
+// font-family: 'Raleway', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400');
+
+// font-family: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  header.hero {
+    background-image: url('../data/images/wide-banner-pixelated.png');
+    background-size: cover;
+    background-color: $dark-grey;
+    height: 745px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+    .screen {
+      position: relative;
+      z-index: 10;
+      background-color: $black;
+      opacity: 0.55;
+      height: 745px;
+      width: 100%;
+    }
+
+    .banner {
+      position: relative;
+      z-index: 20;
+      color: $white;
+      font-size: 60px;
+      top: -745px;
+      width: 100%;
+      height: 745px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sub-banner {
+      color: $white;
+      font-size: 20px;
+      justify-content: center;
+      align-items: center;     
+    }
+  }
+
+  section.about {
+    padding: 100px 80px;
+    color: $white;
+    background-color: $dark-grey;
+    font-family: 'Raleway', sans-serif;
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 18px;
+      color: $light-grey;
+      line-height: 1.4
+    }
+  }
+
+  section.contact {
+    padding: 100px 80px;
+    background-color: $mid-grey;
+    height: 100px;
+    width: 100%;
+  }
+
+  .divider {
+    display: block;
+    margin: 35px 0px;
+    width: 150px;
+    height: 2px;
+    background-color: $orange;
+  }
+}
